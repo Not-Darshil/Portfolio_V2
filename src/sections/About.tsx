@@ -13,9 +13,9 @@ import BraveIcon from '@/assets/icons/chrome.svg'
 import mapImage from "@/assets/images/map.png"
 import SmileMemoji from '@/assets/images/memoji-smile.png'
 import { CardHeader } from "@/components/CardHeader";
-import { ToolboxItems } from "@/components/ToolBoxItems";
+import { ToolBoxItems } from "@/components/ToolBoxItems";
 
-const toolboxItems = [
+const Tools = [
   {
     title: 'JavaScript',
     iconType: JavascriptIcon,
@@ -105,8 +105,8 @@ export const AboutSection = () => {
           description="Explore the technologies and tools I use to craft exceptional digital experiences."
           className="px-6 pt-6" 
           ></CardHeader>
-          <ToolboxItems items= {toolboxItems} className="mt-6 "></ToolboxItems>
-          <ToolboxItems items= {toolboxItems} className="mt-6 " itemWrapperClassName="-translate-x-1/2"></ToolboxItems>
+          <ToolBoxItems items= {Tools} className="mt-6 "></ToolBoxItems>
+          <ToolBoxItems items= {Tools} className="mt-6 " itemWrapperClassName="-translate-x-1/2"></ToolBoxItems>
         </Card>
         <Card className="h-[320px] p-0 flex flex-col">
           <CardHeader title="Beyond the Code" description="Explore my interests and hobbies beyof the digital realm." className="px-6 py-6"></CardHeader>
