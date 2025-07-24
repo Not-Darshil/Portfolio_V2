@@ -1,7 +1,7 @@
 import { TechIcon } from "./TechIcon"
 import { twMerge } from "tailwind-merge";
 
-export const ToolBoxItems = (
+export const ToolItems = (
     {
         items, 
         className,
