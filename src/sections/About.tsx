@@ -1,3 +1,4 @@
+'use client';
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import { TechIcon } from "@/components/TechIcon";
@@ -14,6 +15,8 @@ import mapImage from "@/assets/images/map.png"
 import SmileMemoji from '@/assets/images/memoji-smile.png'
 import { CardHeader } from "@/components/CardHeader";
 import { ToolItems } from "@/components/ToolItems";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const Tools = [
   {
@@ -88,6 +91,7 @@ const hobbies = [
 ]
 
 export const AboutSection = () => {
+  const constraintRef = useRef(null);
   return (
     <div className="py-20 lg:py-28">
       <div className="container">
@@ -105,24 +109,27 @@ export const AboutSection = () => {
                 description="Explore the technologies and tools I use to craft exceptional digital experiences."
                 className=""
               ></CardHeader>
-              <ToolItems items={Tools} className=""></ToolItems>
-              <ToolItems items={Tools} className="mt-6 " itemsWrapperClassName="-translate-x-1/2"></ToolItems>
+              <ToolItems items={Tools} className="" itemsWrapperClassName="animate-move-left [animation-duration:15s]"></ToolItems>
+              <ToolItems items={Tools} className="mt-6 " itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:15s]"></ToolItems>
             </Card>
           </div>
         </div>
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3 ">
+        <div className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3 ">
           <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
             <CardHeader title="Beyond the Code" description="Explore my interests and hobbies beyof the digital realm." className="px-6 py-6"></CardHeader>
-            <div className=" relative flex-1">
+            <div className=" relative flex-1" ref={constraintRef}>
               {
                 hobbies.map(hobby => (
-                  <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-100 to-sky-400  rounded-full py-1.5 absolute  " style={{
+                  <motion.div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-100 to-sky-400  rounded-full py-1.5 absolute  " style={{
                     left: hobby.left,
                     top: hobby.top,
-                  }}>
+                  }}
+                  drag
+                  dragConstraints={constraintRef}
+                  >
                     <span className=" font-medium text-gray-950 ">{hobby.title}</span>
                     <span>{hobby.emoji}</span>
-                  </div>
+                  </motion.div>
                 ))
               }
             </div>
@@ -130,8 +137,10 @@ export const AboutSection = () => {
 
           <Card className=" h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
             <Image src={mapImage} alt="map" className="h-full w-full object-cover object-left-top" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
-              <Image src={SmileMemoji} alt="smiling memoji" className="size-20" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r after:content-[''] after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute inset-0 bg-gradient-to-r rounded-full from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
+              <div className="absolute inset-0 bg-gradient-to-r rounded-full  from-emerald-300 -z-10 to-sky-400 "></div>
+              <Image src={SmileMemoji} alt="smiling memoji" className="size-20 z-0" />
             </div>
           </Card>
         </div>
