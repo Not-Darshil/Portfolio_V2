@@ -8,8 +8,8 @@ import { HeroOrbit } from '@/components/HeroOrbit';
 
 export const HeroSection = ({ id }: { id?: string }) => {
   return (
-    <div id={id} className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+    <div id={id} className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip lg:-mt-28  md:-mt-28 sm:-mt-14'>
+      <div className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div className="absolute inset-0 -z-30 opacity-5" style={{
           backgroundImage: `url(${grainImage.src})`
         }}>
