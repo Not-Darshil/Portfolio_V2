@@ -51,20 +51,20 @@ const testimonials = [
   },
   {
     name: "Ashutosh Sharma",
-    position: "Intern at 3W Solutions",
+    position: "Intern @ 3W Solutions",
     text: "I had the opportunity to build projects alongside Darshil, and it was an excellent experience. His technical skills and collaborative nature made the work both efficient and enjoyable.",
     avatar: memojiAvatar5,
   },
   {
     name: "Chirag Tyagi",
-    position: "Director at Dhanamitra Infotech",
+    position: "Director @ Dhanamitra Infotech",
     text: "Darshil is a hardworking and consistent professional with exceptional API development skills. His contributions were crucial in delivering high-quality, reliable solutions on time.",
     avatar: memojiAvatar1,
   },
   {
     name: "Divyansh Bajpayee",
     position: "Software Developer",
-    text: "Darshil is a great collaborator. I’ve worked with him on a mini-project, and his teamwork, dedication, and technical expertise made the experience smooth and productive.",
+    text: "Darshil is a great collaborator. I&apos;ve worked with him on a mini-project, and his teamwork, dedication, and technical expertise made the experience smooth and productive.",
     avatar: memojiAvatar5,
   },
 ];
@@ -76,7 +76,7 @@ export const TestimonialsSection = ({ id }: { id?: string }) => {
       <div className="containter ">
         <SectionHeader eyebrow="Happy Clients & Colleagues" title="What Folks says about Me" description="Don't just take my word for it. See what my clients and colleagues say about my work." />
         <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-          <div className='flex gap-8 pr-8 flex-none animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]'>
+          <div className='flex gap-8 pr-8 flex-none animate-move-left [animation-duration:30s] hover:[animation-play-state:paused]'>
             {[...new Array(2)].fill(0).map((_, index) => (
               <Fragment key={index}>
                 {testimonials.map(testimonial => (

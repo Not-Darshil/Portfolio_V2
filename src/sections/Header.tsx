@@ -13,37 +13,37 @@ export const Header = () => {
   ];
 
   useEffect(() => {
-    // const handleScroll = () => {
-    //   let current = "";
-    //   for (const section of sections) {
-    //     const el = document.getElementById(section.id);
-    //     if (el) {
-    //       const offset = el.getBoundingClientRect().top;
-    //       if (offset <= 100) current = section.id; // 100px from top
-    //     }
-    //   }
-    //   setActive(current);
-    // };
-
     const handleScroll = () => {
       let current = "";
-      const scrollPos = window.scrollY + window.innerHeight;
-      const pageHeight = document.documentElement.scrollHeight;
-
-      // If we are near the bottom, set Contact as active
-      if (pageHeight - scrollPos < 50) {
-        current = "contact";
-      } else {
-        for (const section of sections) {
-          const el = document.getElementById(section.id);
-          if (el) {
-            const offset = el.getBoundingClientRect().top;
-            if (offset <= 100) current = section.id;
-          }
+      for (const section of sections) {
+        const el = document.getElementById(section.id);
+        if (el) {
+          const offset = el.getBoundingClientRect().top;
+          if (offset <= 100) current = section.id; // 100px from top
         }
       }
       setActive(current);
     };
+
+    // const handleScroll = () => {
+    //   let current = "";
+    //   const scrollPos = window.scrollY + window.innerHeight;
+    //   const pageHeight = document.documentElement.scrollHeight;
+
+    //   // If we are near the bottom, set Contact as active
+    //   if (pageHeight - scrollPos < 50) {
+    //     current = "contact";
+    //   } else {
+    //     for (const section of sections) {
+    //       const el = document.getElementById(section.id);
+    //       if (el) {
+    //         const offset = el.getBoundingClientRect().top;
+    //         if (offset <= 100) current = section.id;
+    //       }
+    //     }
+    //   }
+    //   setActive(current);
+    // };
 
 
     window.addEventListener("scroll", handleScroll);

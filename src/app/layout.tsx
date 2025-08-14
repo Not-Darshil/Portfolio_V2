@@ -9,6 +9,9 @@ const calistoga = Calistoga({subsets:['latin'],variable:"--font-serif",weight:["
 export const metadata: Metadata = {
   title: "Darshil Portfolio",
   description: "not.darshil",
+   icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

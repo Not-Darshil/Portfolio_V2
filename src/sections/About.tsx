@@ -131,7 +131,7 @@ export const AboutSection = ({ id }: { id?: string }) => {
         </div>
         <div className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3 ">
           <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
-            <CardHeader title="Beyond the Code" description="Explore my interests and hobbies beyof the digital realm." className="px-6 py-6"></CardHeader>
+            <CardHeader title="Beyond the Code" description="Explore my interests and hobbies beyond the digital realm." className="px-6 py-6"></CardHeader>
             <div className=" relative flex-1" ref={constraintRef}>
               {
                 hobbies.map(hobby => (
