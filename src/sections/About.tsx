@@ -6,12 +6,15 @@ import StarIcon from "@/assets/icons/star.svg"
 import BookCover from "@/assets/images/book-cover.png";
 import Image from "next/image";
 import JavascriptIcon from '@/assets/icons/square-js.svg'
-import HTMLIcon from '@/assets/icons/github.svg'
-import PythonIcon from '@/assets/icons/html5.svg'
-import ExpressIcon from '@/assets/icons/react.svg'
+import PythonIcon from '@/assets/icons/python.svg'
+import ExpressIcon from '@/assets/icons/express.svg'
 import GithubIcon from '@/assets/icons/github.svg'
-import BraveIcon from '@/assets/icons/chrome.svg'
-import mapImage from "@/assets/images/map.png"
+import ReactIcon from '@/assets/icons/react.svg'
+import NodeJSIcon from '@/assets/icons/nodejs.svg'
+import NextJSIcon from '@/assets/icons/next.svg'
+import BraveIcon from '@/assets/icons/brave.svg'
+import SQLIcon from '@/assets/icons/sql.svg'
+import mapImage from "@/assets/images/map.jpg"
 import SmileMemoji from '@/assets/images/memoji-smile.png'
 import { CardHeader } from "@/components/CardHeader";
 import { ToolItems } from "@/components/ToolItems";
@@ -24,43 +27,55 @@ const Tools = [
     iconType: JavascriptIcon,
   },
   {
-    title: 'HTML5',
-    iconType: HTMLIcon,
-  },
-  {
     title: 'Python',
     iconType: PythonIcon,
   },
   {
-    title: 'Express',
+    title: 'Node JS',
+    iconType: NodeJSIcon,
+  },
+  {
+    title: 'Express JS',
     iconType: ExpressIcon,
   },
   {
-    title: 'Github',
+    title: 'Next JS',
+    iconType: NextJSIcon,
+  },
+  {
+    title: 'Git/ Github',
     iconType: GithubIcon,
+  },
+  {
+    title: 'React JS',
+    iconType: ReactIcon,
   },
   {
     title: 'Brave',
     iconType: BraveIcon,
   },
+  {
+    title: 'SQL',
+    iconType: SQLIcon,
+  },
 ]
 
 const hobbies = [
   {
-    title: 'Painting',
-    emoji: '🎨',
+    title: 'Sports',
+    emoji: '🏏',
     left: '5%',
     top: '5%',
   },
   {
-    title: 'Photography',
-    emoji: '📸',
+    title: 'Cooking',
+    emoji: '🍪',
     left: '50%',
     top: '5%',
   },
   {
-    title: 'Hiking',
-    emoji: '🥾',
+    title: 'Chess',
+    emoji: '♟️',
     left: '35%',
     top: '40%',
   },

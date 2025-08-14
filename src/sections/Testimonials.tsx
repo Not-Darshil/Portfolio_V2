@@ -9,47 +9,75 @@ import grainImage from "@/assets/images/grain.jpg";
 import { Card } from "@/components/Card";
 import { Fragment } from 'react';
 
+// const testimonials = [
+//   {
+//     name: "Alex Turner",
+//     position: "Marketing Manager @ TechStartups",
+//     text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+//     avatar: memojiAvatar1,
+//   },
+//   {
+//     name: "Olivia Green",
+//     position: "Head of Design @ GreenLeaf",
+//     text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
+//     avatar: memojiAvatar2,
+//   },
+//   {
+//     name: "Daniel White",
+//     position: "CEO @ InnovateCo",
+//     text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+//     avatar: memojiAvatar3,
+//   },
+//   {
+//     name: "Emily Carter",
+//     position: "Product Manager @ GlobalTech",
+//     text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+//     avatar: memojiAvatar4,
+//   },
+//   {
+//     name: "Michael Brown",
+//     position: "Director of IT @ MegaCorp",
+//     text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
+//     avatar: memojiAvatar5,
+//   },
+// ];
+
 const testimonials = [
   {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
-    avatar: memojiAvatar1,
-  },
-  {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-    avatar: memojiAvatar2,
-  },
-  {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-    avatar: memojiAvatar3,
-  },
-  {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    name: "Drishti Vats",
+    position: "Senior AI Engineer",
+    text: "Darshil approaches every challenge with remarkable confidence and a hunger to learn. His ability to quickly grasp new concepts and apply them effectively is truly impressive.",
     avatar: memojiAvatar4,
   },
   {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
+    name: "Ashutosh Sharma",
+    position: "Intern at 3W Solutions",
+    text: "I had the opportunity to build projects alongside Darshil, and it was an excellent experience. His technical skills and collaborative nature made the work both efficient and enjoyable.",
+    avatar: memojiAvatar5,
+  },
+  {
+    name: "Chirag Tyagi",
+    position: "Director at Dhanamitra Infotech",
+    text: "Darshil is a hardworking and consistent professional with exceptional API development skills. His contributions were crucial in delivering high-quality, reliable solutions on time.",
+    avatar: memojiAvatar1,
+  },
+  {
+    name: "Divyansh Bajpayee",
+    position: "Software Developer",
+    text: "Darshil is a great collaborator. I’ve worked with him on a mini-project, and his teamwork, dedication, and technical expertise made the experience smooth and productive.",
     avatar: memojiAvatar5,
   },
 ];
+
 
 export const TestimonialsSection = ({ id }: { id?: string }) => {
   return (
     <div id={id} className="py-16 lg:py-24">
       <div className="containter ">
-        <SectionHeader eyebrow="Happy Clients & Colleagues" title="What about client says about Me" description="Don't just take my word for it. See what my clients and colleagues say about my work." />
+        <SectionHeader eyebrow="Happy Clients & Colleagues" title="What Folks says about Me" description="Don't just take my word for it. See what my clients and colleagues say about my work." />
         <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
           <div className='flex gap-8 pr-8 flex-none animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]'>
-          {[...new Array(2)].fill(0).map((_, index) => (
+            {[...new Array(2)].fill(0).map((_, index) => (
               <Fragment key={index}>
                 {testimonials.map(testimonial => (
                   <Card
