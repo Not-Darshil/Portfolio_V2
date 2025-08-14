@@ -47,9 +47,9 @@ const portfolioProjects = [
   },
 ];
 
-export const ProjectsSection = () => {
+export const ProjectsSection = ({ id }: { id?: string }) => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id={id} className="pb-16 lg:py-24">
       <div>
         <div className="container">
           <SectionHeader eyebrow="Real-worls Results" title="Featured Projects" description="See how I transformed concepts into engaging digital experiences."></SectionHeader>

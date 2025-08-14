@@ -42,9 +42,9 @@ const testimonials = [
   },
 ];
 
-export const TestimonialsSection = () => {
+export const TestimonialsSection = ({ id }: { id?: string }) => {
   return (
-    <div className="py-16 lg:py-24">
+    <div id={id} className="py-16 lg:py-24">
       <div className="containter ">
         <SectionHeader eyebrow="Happy Clients & Colleagues" title="What about client says about Me" description="Don't just take my word for it. See what my clients and colleagues say about my work." />
         <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
